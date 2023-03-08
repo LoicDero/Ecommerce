@@ -1,9 +1,6 @@
-# Projet Ecommerce
+# Ecomerce
 
-## **Loïc Dero**
-
-## **DYDY**
-
-## **Clemou**
-
-## **Thib**
+### Loïc Dero
+### Thibault Delime
+### Clément Berlanger 
+### Dylan Feron 
