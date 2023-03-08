@@ -1,4 +1,4 @@
-# Ecomerce
+# Ecommerce
 
 ### Loïc Dero
 ### Thibault Delime
