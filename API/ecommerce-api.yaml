@@ -1,0 +1,94 @@
+openapi: 3.0.3
+info:
+  title: Swagger Ecommerce - OpenAPI 3.0
+  description: |-
+    Projet ecommerce sneakers Ephec 2TI
+    Berlanger Clément
+    Dylan Feron 
+    Loic Dero
+    Thibault Delime
+  version: '1.0'
+servers:
+  - url: https://test.com
+tags:
+  - name: magasin
+    description: Tout ce qui est utilise par le client pour acheter en ligne 
+  - name: admin
+    description: Utilise parle proprietaire du site pour modifier les données
+paths:
+  /chaussures:
+    get:
+      tags:
+        - magasin
+      summary: recevoir la liste des chaussures disponibles
+      description: recevoir la liste des chaussures disponibles
+      operationId: listeChaussures
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/listeChaussures'          
+        default:
+          description: Any error (4xx or 5xx)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorInfo'          
+components:
+  schemas:
+    listeChaussures:
+      description: liste des chaussures disponibles
+      required: 
+      - nombreChaussure
+      - chaussures
+      type: object
+      properties:
+        nombreChaussure:
+          description: nombre de chaussures dans la liste
+          type: integer
+          format: int32
+        chaussures:
+          description: tableau d'objet chaussure
+          type: array
+          items: 
+            $ref: '#/components/schemas/chaussure'
+    chaussure:
+      description: objet chaussure
+      required:
+      - nom
+      - prix
+      - marque
+      type: object
+      properties: 
+        nom:
+          description: nom de la chaussure
+          type: string
+        prix:
+          description: prix de la chaussure
+          type: number
+          format: float
+        marque:
+          description: marque de la chaussure
+          type: string
+    ErrorInfo:
+      description: informations a propos d'une erreur
+      required:
+      - timestamp
+      - message
+      - erreurTechnique
+      type: object
+      properties: 
+        timestamp:
+          description: moment auquel l'erreur arrive sur le serveur
+          type: string
+          format: date-time
+        message:
+          description: message d'erreur pour l'utilisateur
+          type: string
+        erreurTechnique:
+          description: message d'erreur technique pour debugger 
+          type: string
+    
+  
