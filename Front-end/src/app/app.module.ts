@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './components/partials/search/search.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
+import { ShoesPageComponent } from './components/pages/shoes-page/shoes-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TagsComponent } from './components/partials/tags/tags.component';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    TagsComponent
+    TagsComponent,
+    ShoesPageComponent
   ],
   imports: [
     BrowserModule,

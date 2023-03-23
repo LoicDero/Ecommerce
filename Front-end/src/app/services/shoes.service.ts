@@ -27,4 +27,8 @@ export class ShoesService {
     this.getAll():
     this.getAll().filter(shoes => shoes.tags?.includes(tag));
   }
+
+  getShoesById(shoesId:string):Shoes{
+    return this.getAll().find(shoes => shoes.id == shoesId) ?? new Shoes();
+  }
 }
