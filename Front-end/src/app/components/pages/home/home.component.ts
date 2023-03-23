@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ShoesService } from 'src/app/services/shoes.service';
 import { Shoes } from 'src/app/shared/models/shoes';
 
@@ -10,8 +11,13 @@ import { Shoes } from 'src/app/shared/models/shoes';
 export class HomeComponent implements OnInit {
 
   shoes:Shoes[] = [];
-  constructor(private shoesService:ShoesService) {
-    this.shoes = shoesService.getAll();
+  constructor(private shoesService:ShoesService, activatedRoute:ActivatedRoute) {
+    activatedRoute.params.subscribe((params) => {
+      if(params.searchTerm)
+      this.shoes = this.shoesService.getAllShoesBySearchTerm(params.searchTerm);
+      else
+      this.shoes = shoesService.getAll();
+    })
   }
 
   ngOnInit(): void {

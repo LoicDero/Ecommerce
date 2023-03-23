@@ -3,7 +3,7 @@ import { Shoes } from "./app/shared/models/shoes";
 export const sample_shoes: Shoes[] = [
   {
     id:'1',
-    name: 'Air Jordan 4 Retro SB Pine Green',
+    name: 'Nike Air Jordan 4 Retro SB Pine Green',
     price: 400,
     favorite: true,
     tags: ['street', 'Haute', 'Jordan', 'Nike'],
@@ -23,7 +23,7 @@ export const sample_shoes: Shoes[] = [
   },
   {
     id:'3',
-    name: '9060 Black White',
+    name: 'New Balance 9060 Black White',
     price: 230,
     favorite: false,
     tags: ['street', 'Basse', 'New Balance'],
@@ -53,7 +53,7 @@ export const sample_shoes: Shoes[] = [
   },
   {
     id:'6',
-    name: 'Air Jordan 4 Midnight Navy',
+    name: 'Nike Air Jordan 4 Midnight Navy',
     price: 260,
     favorite: true,
     tags: ['street', 'Haute', 'Jordan', 'Nike'],

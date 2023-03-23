@@ -12,4 +12,8 @@ export class ShoesService {
   getAll():Shoes[]{
     return sample_shoes;
   }
+
+  getAllShoesBySearchTerm(searchTerm:string){
+    return this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  }
 }
