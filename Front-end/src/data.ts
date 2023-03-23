@@ -1,4 +1,5 @@
 import { Shoes } from "./app/shared/models/shoes";
+import { Tag } from "./app/shared/models/Tag";
 
 export const sample_shoes: Shoes[] = [
   {
@@ -26,7 +27,7 @@ export const sample_shoes: Shoes[] = [
     name: 'New Balance 9060 Black White',
     price: 230,
     favorite: false,
-    tags: ['street', 'Basse', 'New Balance'],
+    tags: ['street', 'Basse', 'New Balance', 'Noir'],
     stars: 3.5,
     imageUrl: 'assets/shoes-3.jpg',
     brand : 'New Balance'
@@ -61,4 +62,15 @@ export const sample_shoes: Shoes[] = [
     imageUrl: 'assets/shoes-6.jpg',
     brand : 'Nike Air Jordan'
   },
+]
+
+export const sample_tags: Tag[]=[
+  {name: 'All', count: 6 },
+  {name: 'Nike', count: 3 },
+  {name: 'Yeezy', count: 2 },
+  {name: 'Jordan', count: 2 },
+  {name: 'New Balance', count: 1 },
+  {name: 'Basse', count: 4 },
+  {name: 'Haute', count: 2 },
+  {name: 'Noir', count: 3 }
 ]
