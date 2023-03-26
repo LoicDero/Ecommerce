@@ -56,7 +56,7 @@ export const sample_shoes: Shoes[] = [
     id:'6',
     name: 'Nike Air Jordan 4 Midnight Navy',
     price: 260,
-    favorite: true,
+    favorite: false,
     tags: ['street', 'Haute', 'Jordan', 'Nike'],
     stars: 5.0,
     imageUrl: 'assets/shoes-6.jpg',
