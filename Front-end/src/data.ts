@@ -62,6 +62,16 @@ export const sample_shoes: Shoes[] = [
     imageUrl: 'assets/shoes-6.jpg',
     brand : 'Nike Air Jordan'
   },
+  {
+    id:'7',
+    name: 'Adidas Gazelle Bleu',
+    price: 60,
+    favorite: false,
+    tags: ['street', 'Basse', 'Adidas', 'Gazelle'],
+    stars: 2.0,
+    imageUrl: 'assets/shoes-7.jpg',
+    brand : 'Adidas'
+  },
 ]
 
 export const sample_tags: Tag[]=[
