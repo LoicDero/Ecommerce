@@ -7,8 +7,8 @@ export const sample_shoes: Shoes[] = [
     name: 'Nike Air Jordan 4 Retro SB Pine Green',
     price: 400,
     favorite: true,
-    tags: ['street', 'Haute', 'Jordan', 'Nike'],
-    stars: 4.0,
+    tags: ['street', 'Haute', 'Jordan', 'Nike', 'white'],
+    stars: 3.0,
     imageUrl: 'assets/shoes-1.jpg',
     brand : 'Nike Air Jordan'
   },
@@ -17,8 +17,8 @@ export const sample_shoes: Shoes[] = [
     name: 'Nike Duck Low Red',
     price: 200,
     favorite: true,
-    tags: ['street', 'Basse', 'Nike', 'Dunk'],
-    stars: 5.0,
+    tags: ['street', 'Basse', 'Nike', 'Dunk','white'],
+    stars: 2.0,
     imageUrl: 'assets/shoes-2.jpg',
     brand : 'Nike'
   },
@@ -58,29 +58,30 @@ export const sample_shoes: Shoes[] = [
     price: 260,
     favorite: false,
     tags: ['street', 'Haute', 'Jordan', 'Nike'],
-    stars: 5.0,
+    stars: 3.0,
     imageUrl: 'assets/shoes-6.jpg',
     brand : 'Nike Air Jordan'
   },
   {
     id:'7',
-    name: 'Adidas Gazelle Bleu',
-    price: 60,
-    favorite: false,
-    tags: ['street', 'Basse', 'Adidas', 'Gazelle'],
-    stars: 2.0,
+    name: 'Yeezy cloud white',
+    price: 460,
+    favorite: true,
+    tags: ['street', 'Basse', 'Yeezy', 'white'],
+    stars: 5.0,
     imageUrl: 'assets/shoes-7.jpg',
-    brand : 'Adidas'
+    brand : 'Yeezy'
   },
 ]
 
 export const sample_tags: Tag[]=[
   {name: 'All', count: 6 },
   {name: 'Nike', count: 3 },
-  {name: 'Yeezy', count: 2 },
+  {name: 'Yeezy', count: 3 },
   {name: 'Jordan', count: 2 },
   {name: 'New Balance', count: 1 },
   {name: 'Basse', count: 4 },
   {name: 'Haute', count: 2 },
-  {name: 'Noir', count: 3 }
+  {name: 'Noir', count: 3 },
+  {name: 'white', count: 3}
 ]
