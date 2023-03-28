@@ -1,0 +1,6 @@
+1:52:45
+
+Garder la taille choisi sur le site dans le panier
+Pourquoi pas ajouter des tris, genre par prix, tailles.
+Tailles non dispo en gris
+

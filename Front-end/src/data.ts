@@ -10,7 +10,8 @@ export const sample_shoes: Shoes[] = [
     tags: ['street', 'Haute', 'Jordan', 'Nike', 'white'],
     stars: 3.0,
     imageUrl: 'assets/shoes-1.jpg',
-    brand : 'Nike Air Jordan'
+    brand : 'Nike Air Jordan',
+    size : [38,39,40,41,42,43,44,45]
   },
   {
     id:'2',
@@ -20,7 +21,8 @@ export const sample_shoes: Shoes[] = [
     tags: ['street', 'Basse', 'Nike', 'Dunk','white'],
     stars: 2.0,
     imageUrl: 'assets/shoes-2.jpg',
-    brand : 'Nike'
+    brand : 'Nike',
+    size : [38,39,41,42,43,44,45]
   },
   {
     id:'3',
@@ -30,7 +32,8 @@ export const sample_shoes: Shoes[] = [
     tags: ['street', 'Basse', 'New Balance', 'Noir'],
     stars: 3.5,
     imageUrl: 'assets/shoes-3.jpg',
-    brand : 'New Balance'
+    brand : 'New Balance',
+    size : [38,39,40,41,42,43,44,45]
   },
   {
     id:'4',
@@ -40,7 +43,8 @@ export const sample_shoes: Shoes[] = [
     tags: ['street', 'Basse', 'Yeezy', 'Noir'],
     stars: 4.5,
     imageUrl: 'assets/shoes-4.jpg',
-    brand : 'Yeezy'
+    brand : 'Yeezy',
+    size : [38,39,40,41,42,43,44,45]
   },
   {
     id:'5',
@@ -50,7 +54,8 @@ export const sample_shoes: Shoes[] = [
     tags: ['street', 'Basse', 'Yeezy', 'Noir'],
     stars: 4.0,
     imageUrl: 'assets/shoes-5.jpg',
-    brand : 'Yeezy'
+    brand : 'Yeezy',
+    size : [38,39,40,41,42,43,44,45]
   },
   {
     id:'6',
@@ -60,7 +65,8 @@ export const sample_shoes: Shoes[] = [
     tags: ['street', 'Haute', 'Jordan', 'Nike'],
     stars: 3.0,
     imageUrl: 'assets/shoes-6.jpg',
-    brand : 'Nike Air Jordan'
+    brand : 'Nike Air Jordan',
+    size : [38,39,40,41,42,43,44,45]
   },
   {
     id:'7',
@@ -70,7 +76,8 @@ export const sample_shoes: Shoes[] = [
     tags: ['street', 'Basse', 'Yeezy', 'white'],
     stars: 5.0,
     imageUrl: 'assets/shoes-7.jpg',
-    brand : 'Yeezy'
+    brand : 'Yeezy',
+    size : [38,39,40,41,42,43,44,45]
   },
 ]
 

@@ -7,4 +7,5 @@ export class Shoes{
   stars!: number;
   imageUrl!:string;
   brand!:string;
+  size!:number[];
 }
