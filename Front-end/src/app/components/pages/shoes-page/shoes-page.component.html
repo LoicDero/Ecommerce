@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found
+  [visible]="!shoes.id"
+  notFoundMessage="La chaussure n'a pas été trouvé"
+  resetLinkText="Retourner à la page d'accueil">
+</app-not-found>
+<div *ngIf="shoes.id" class="container">
   <img [src]="shoes.imageUrl" [alt]="shoes.name">
 
   <div class="details">
