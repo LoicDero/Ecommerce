@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, ObservedValueOf } from 'rxjs';
 import { sample_shoes, sample_tags } from 'src/data';
+import { SHOES_BY_ID_URL, SHOES_BY_SEARCH_URL, SHOES_BY_TAG_URL, SHOES_TAGS_URL, SHOES_URL } from '../shared/constants/urls';
 import { Shoes } from '../shared/models/shoes';
 import { Tag } from '../shared/models/Tag';
 
@@ -8,27 +11,27 @@ import { Tag } from '../shared/models/Tag';
 })
 export class ShoesService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getAll():Shoes[]{
-    return sample_shoes;
+  getAll(): Observable<Shoes[]> {
+    return this.http.get<Shoes[]>(SHOES_URL);
   }
 
   getAllShoesBySearchTerm(searchTerm:string){
-    return this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    return this.http.get<Shoes[]>(SHOES_BY_SEARCH_URL + searchTerm);
   }
 
-  getAllTags():Tag[]{
-    return sample_tags;
+  getAllTags(): Observable<Tag[]>{
+    return this.http.get<Tag[]>(SHOES_TAGS_URL);
   }
 
-  getAllShoesByTag(tag:string):Shoes[]{
+  getAllShoesByTag(tag:string): Observable<Shoes[]>{
     return tag == 'All'?
-    this.getAll():
-    this.getAll().filter(shoes => shoes.tags?.includes(tag));
+      this.getAll():
+      this.http.get<Shoes[]>(SHOES_BY_TAG_URL + tag);
   }
 
-  getShoesById(shoesId:string):Shoes{
-    return this.getAll().find(shoes => shoes.id == shoesId) ?? new Shoes();
+  getShoesById(shoesId:string): Observable<Shoes>{
+    return this.http.get<Shoes>(SHOES_BY_ID_URL + shoesId);
   }
 }

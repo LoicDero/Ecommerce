@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { ShoesService } from 'src/app/services/shoes.service';
 import { Shoes } from 'src/app/shared/models/shoes';
 
@@ -12,13 +13,18 @@ export class HomeComponent implements OnInit {
 
   shoes:Shoes[] = [];
   constructor(private shoesService:ShoesService, activatedRoute:ActivatedRoute) {
+    let shoesObservable:Observable<Shoes[]>;
     activatedRoute.params.subscribe((params) => {
       if(params.searchTerm)
-      this.shoes = this.shoesService.getAllShoesBySearchTerm(params.searchTerm);
+        shoesObservable = this.shoesService.getAllShoesBySearchTerm(params.searchTerm);
       else if (params.tag)
-      this.shoes = this.shoesService.getAllShoesByTag(params.tag);
+        shoesObservable = this.shoesService.getAllShoesByTag(params.tag);
       else
-      this.shoes = shoesService.getAll();
+        shoesObservable = shoesService.getAll();
+
+        shoesObservable.subscribe((serverShoes) => {
+          this.shoes = serverShoes;
+        })
     })
   }
 

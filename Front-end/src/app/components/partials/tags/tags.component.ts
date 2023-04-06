@@ -11,7 +11,9 @@ export class TagsComponent implements OnInit {
 
   tags?:Tag[];
   constructor(shoesService:ShoesService){
-    this.tags = shoesService.getAllTags();
+    shoesService.getAllTags().subscribe(serverTags => {
+      this.tags = serverTags;
+    });
   }
 
   ngOnInit(): void {

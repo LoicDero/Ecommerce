@@ -16,7 +16,9 @@ export class ShoesPageComponent implements OnInit {
     private router:Router){
     activatedRoute.params.subscribe((params) => {
       if(params.id)
-      this.shoes = shoesService.getShoesById(params.id)
+        shoesService.getShoesById(params.id).subscribe(serverShoes => {
+          this.shoes = serverShoes;
+        })
     })
   }
 
