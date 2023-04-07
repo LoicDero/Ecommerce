@@ -90,3 +90,34 @@ export const sample_tags: any[]=[
   {name: 'Noir', count: 3 },
   {name: 'white', count: 3}
 ]
+
+export const sample_users: any[] = [
+  {
+    name : "Loic Dero", 
+    email : "loic.dero@gmail.com", 
+    password : "lolo", 
+    addres : "Braine L'alleud",
+    isAdmin : true,
+  }, 
+  {
+    name : "Thibault Delime", 
+    email : "t.delime@students.ephec.be", 
+    password : "thib", 
+    addres : "Neufchateau",
+    isAdmin : true,
+  }, 
+  {
+    name : "Dylan Feron", 
+    email : "d.feron@students.ephec.be", 
+    password : "dydy", 
+    addres : "Ottignies",
+    isAdmin : false,
+  }, 
+  {
+    name : "Clement Berlanger", 
+    email : "c.berlanger@students.ephec.be", 
+    password : "clemou", 
+    addres : "Ottignies",
+    isAdmin : true,
+  }, 
+]

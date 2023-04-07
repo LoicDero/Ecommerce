@@ -1,6 +1,11 @@
-1:52:45
+Idées pour le futur :
 
-Garder la taille choisi sur le site dans le panier
-Pourquoi pas ajouter des tris, genre par prix, tailles.
-Tailles non dispo en gris
+- Garder la taille choisi sur le site dans le panier
+- Pourquoi pas ajouter des tris, genre par prix, tailles.
+- Tailles non dispo en gris
+- Ajouter des photos sur la page shoes
 
+
+Pour tester notre api:
+
+https://www.postman.com/downloads/
