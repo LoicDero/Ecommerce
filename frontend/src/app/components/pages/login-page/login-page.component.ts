@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/shared/models/User';
 
 @Component({
   selector: 'app-login-page',
@@ -32,8 +33,6 @@ export class LoginPageComponent implements OnInit {
   submit(){
     this.isSubmitted = true
     if(this.loginForm.invalid) return
-
-    alert(`email:${this.fc.email.value}, password:${this.fc.password.value}`)
 
     this.userService.login({email:this.fc.email.value, password:this.fc.password.value}).subscribe(() => {
       this.router.navigateByUrl(this.returnUrl)

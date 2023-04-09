@@ -120,4 +120,11 @@ export const sample_users: any[] = [
     addres : "Ottignies",
     isAdmin : true,
   }, 
+  {
+    name : "JHONY NOEL", 
+    email : "JN@gmail.be", 
+    password : "123", 
+    addres : "LLN",
+    isAdmin : true,
+  }, 
 ]
