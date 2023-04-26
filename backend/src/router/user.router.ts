@@ -2,18 +2,35 @@ import { Router } from 'express';
 import { sample_users } from '../data';
 import jwt from "jsonwebtoken";
 const router = Router();
+import asyncHandler from 'express-async-handler'; 
+import { UserModel } from '../models/user.model';
 
-router.post("/login", (req, res) => {
-    const { email, password } = req.body
-    const user = sample_users.find(user => user.email === email && user.password === password)
+router.get("/seed", asyncHandler(
+    async (req: any, res: any) => {
+        const usersCount = await UserModel.countDocuments();
+        if (usersCount > 0) {
+            res.send("Seed is already done!");
+            return;
+        }
+        await UserModel.create(sample_users);
+        res.send("Seed Is Done!");
+    }
+))
 
-    if (user) {
-        res.send(generateTokenReponse(user))
+router.post("/login", asyncHandler(
+    async (req, res) => {
+        const { email, password } = req.body;
+        const user = await UserModel.findOne({email, password});
+
+        if (user) {
+            res.send(generateTokenReponse(user))
+        }
+        else {
+            const BAD_REQUEST = 400
+            res.status(BAD_REQUEST).send("Tu t'es trompé d'email ou de mot passe frérot")
+        }
     }
-    else {
-        res.status(400).send("Tu t'es trompé d'email ou de mot passe frérot")
-    }
-})
+))
 
 const generateTokenReponse = (user: any) => {
     const token = jwt.sign({
