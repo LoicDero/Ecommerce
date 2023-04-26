@@ -57,11 +57,16 @@ components:
     chaussure:
       description: objet chaussure
       required:
+      - id
       - nom
       - prix
       - marque
       type: object
       properties: 
+        id:
+          description: id de la chaussure
+          type: integer
+          format: int64
         nom:
           description: nom de la chaussure
           type: string
