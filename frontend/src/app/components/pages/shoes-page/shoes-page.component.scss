@@ -60,16 +60,19 @@ img{
   margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 2rem;
   background-color: aliceblue;
+
 }
 
-.brand select{
-  width: 3rem;
-  outline: none;
-  border : none;
-  border-bottom: 1px solid lightgrey;
-  font-size: 1.1rem;
-  font-weight: 100;
+.size span{
+  display:flex;
+  position: right;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 2rem;
+  background-color: #e7292986;
 }
+
 
 .tags{
   display: flex;
