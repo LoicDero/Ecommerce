@@ -7,3 +7,4 @@ export const SHOES_BY_TAG_URL = SHOES_URL + '/tag/';
 export const SHOES_BY_ID_URL = SHOES_URL + '/';
 
 export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
+export const USER_REGISTER_URL = BASE_URL + '/api/users/register';

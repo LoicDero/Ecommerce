@@ -1,9 +1,13 @@
 import { Router } from 'express';
 import { sample_users } from '../data';
 import jwt from "jsonwebtoken";
-const router = Router();
 import asyncHandler from 'express-async-handler'; 
 import { User, UserModel } from '../models/user.model';
+import { HTTP_BAD_REQUEST } from '../constants/https_status';
+import bcrypt from 'bcryptjs';
+
+const router = Router();
+
 
 router.get("/seed", asyncHandler(
     async (req: any, res: any) => {
@@ -29,6 +33,31 @@ router.post("/login", asyncHandler(
             const BAD_REQUEST = 400
             res.status(BAD_REQUEST).send("Tu t'es trompé d'email ou de mot passe frérot")
         }
+    }
+))
+
+router.post('/register', asyncHandler(
+    async (req, res) => {
+        const {name, email, password, address} = req.body;
+        const user = await UserModel.findOne({email});
+        if(user){
+            res.status(HTTP_BAD_REQUEST).send("Cet email est déjà utilisé");
+            return;
+        }
+        
+        const ecryptedPassword = await bcrypt.hash(password, 10);
+
+        const newUser:User = {
+            id:'', 
+            name,
+            email: email.toLowerCase(),
+            password: ecryptedPassword,
+            address,
+            isAdmin: false
+        }
+
+        const dbUser = await UserModel.create(newUser);
+        res.send(generateTokenReponse(dbUser));
     }
 ))
 
