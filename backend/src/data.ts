@@ -9,7 +9,7 @@ export const sample_shoes: any[] = [
     stars: 3.0,
     imageUrl: 'assets/shoes-1.jpg',
     brand : 'Nike Air Jordan',
-    size : [38,39,40,41,42,43,44,45]
+    size: 44
   },
   {
     id:'2',
@@ -20,7 +20,7 @@ export const sample_shoes: any[] = [
     stars: 2.0,
     imageUrl: 'assets/shoes-2.jpg',
     brand : 'Nike',
-    size : [38,39,41,42,43,44,45]
+    size: 44
   },
   {
     id:'3',
@@ -31,7 +31,7 @@ export const sample_shoes: any[] = [
     stars: 3.5,
     imageUrl: 'assets/shoes-3.jpg',
     brand : 'New Balance',
-    size : [38,39,40,41,42,43,44,45]
+    size: 44
   },
   {
     id:'4',
@@ -42,7 +42,7 @@ export const sample_shoes: any[] = [
     stars: 4.5,
     imageUrl: 'assets/shoes-4.jpg',
     brand : 'Yeezy',
-    size : [38,39,40,41,42,43,44,45]
+    size: 44
   },
   {
     id:'5',
@@ -53,7 +53,7 @@ export const sample_shoes: any[] = [
     stars: 4.0,
     imageUrl: 'assets/shoes-5.jpg',
     brand : 'Yeezy',
-    size : [38,39,40,41,42,43,44,45]
+    size: 44
   },
   {
     id:'6',
@@ -64,7 +64,7 @@ export const sample_shoes: any[] = [
     stars: 3.0,
     imageUrl: 'assets/shoes-6.jpg',
     brand : 'Nike Air Jordan',
-    size : [38,39,40,41,42,43,44,45]
+    size: 44
   },
   {
     id:'7',
@@ -75,7 +75,7 @@ export const sample_shoes: any[] = [
     stars: 5.0,
     imageUrl: 'assets/shoes-7.jpg',
     brand : 'Yeezy',
-    size : [38,39,40,41,42,43,44,45]
+    size: 44
   },
 ]
 
@@ -96,35 +96,35 @@ export const sample_users: any[] = [
     name : "Loic Dero", 
     email : "loic.dero@gmail.com", 
     password : "lolo", 
-    addres : "Braine L'alleud",
+    address : "Braine L'alleud",
     isAdmin : true,
   }, 
   {
     name : "Thibault Delime", 
-    email : "t.delime@students.ephec.be", 
+    email : "thibaultdelime@gmail.com", 
     password : "thib", 
-    addres : "Neufchateau",
+    address : "Neufchateau",
     isAdmin : true,
   }, 
   {
     name : "Dylan Feron", 
     email : "d.feron@students.ephec.be", 
     password : "dydy", 
-    addres : "Ottignies",
+    address : "Ottignies",
     isAdmin : false,
   }, 
   {
     name : "Clement Berlanger", 
     email : "c.berlanger@students.ephec.be", 
     password : "clemou", 
-    addres : "Ottignies",
+    address : "Ottignies",
     isAdmin : true,
   }, 
   {
     name : "JHONY NOEL", 
     email : "JN@gmail.be", 
     password : "123", 
-    addres : "LLN",
+    address : "LLN",
     isAdmin : true,
   }, 
 ]

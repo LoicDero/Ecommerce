@@ -28,9 +28,10 @@
         <span>
           {{shoes.brand}}
         </span>
-        <select class="size">
-          <option *ngFor="let size of shoes.size">{{size}}</option>
-        </select>
+        <div class="size">
+          <span>
+            {{shoes.size}}
+          </span>
       </div>
       <div class="tags">
         <a *ngFor="let tag of shoes.tags" routerLink="/tag/{{tag}}">
