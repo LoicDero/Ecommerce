@@ -3,7 +3,7 @@ import { sample_users } from '../data';
 import jwt from "jsonwebtoken";
 const router = Router();
 import asyncHandler from 'express-async-handler'; 
-import { UserModel } from '../models/user.model';
+import { User, UserModel } from '../models/user.model';
 
 router.get("/seed", asyncHandler(
     async (req: any, res: any) => {
@@ -32,15 +32,21 @@ router.post("/login", asyncHandler(
     }
 ))
 
-const generateTokenReponse = (user: any) => {
+const generateTokenReponse = (user: User) => {
     const token = jwt.sign({
         email: user.email, isAdmin: user.isAdmin
-    }, "TEST-RANDOM", {
+    }, process.env.JWT_SECRET!, {
         expiresIn: "30d"
     });
 
-    user.token = token
-    return user
+    return {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        address: user.address,
+        isAdmin: user.isAdmin,
+        token: token
+    };
 }
 
 export default router;
