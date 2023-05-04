@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td colspan="5">
-      <h3>Order Items:</h3>
+      <h3>Article dans le panier :</h3>
     </td>
   </tr>
   <tr *ngFor="let item of order.items">
@@ -14,13 +14,13 @@
       {{item.shoes.name}}
     </td>
     <td>
-      {{item.shoes.price | currency}}
+      {{item.shoes.price | currency:'EUR':true}}
     </td>
     <td>
       {{item.quantity}}
     </td>
     <td>
-      {{item.price | currency}}
+      {{item.price | currency:'EUR':true}}
     </td>
   </tr>
   <tr>
@@ -32,7 +32,7 @@
     </td>
     <td>
       <strong>
-        {{order.totalPrice | currency}}
+        {{order.totalPrice | currency:'EUR':true}}
       </strong>
     </td>
   </tr>
