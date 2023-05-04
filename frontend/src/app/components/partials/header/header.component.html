@@ -14,8 +14,12 @@
             <a (click)="logout()">Logout</a>
           </div>
         </li>
-        <a routerLink="/cart-page">
-          Cart <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+        <a routerLink="/cart-page" onmouseover="document.getElementById('cart-icon').style.display = 'none'; document.getElementById('cart-img').style.display = 'inline-block';" onmouseout="document.getElementById('cart-img').style.display = 'none'; document.getElementById('cart-icon').style.display = 'inline-block';">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="cart-icon">
+            <path d="M24 3l-.743 2h-1.929l-3.474 12h-13.239l-4.615-11h16.812l-.564 2h-13.24l2.937 7h10.428l3.432-12h4.195" fill="#e72929" />
+          </svg>
+          <img src="assets/cart.svg" alt="cart" id="cart-img" style="display: none;" />
+          <span *ngIf="cartQuantity">{{cartQuantity}}</span>
         </a>
       </ul>
     </nav>
