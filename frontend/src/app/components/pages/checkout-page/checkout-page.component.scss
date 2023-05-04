@@ -8,9 +8,10 @@
 
 .content{
   width: 35rem;
+  margin-right: 3rem;
 }
 
-.content, form{
+.content,form{
   display: flex;
   flex-direction: column;
 }
@@ -20,9 +21,9 @@ form{
 }
 
 .buttons-container{
-   flex-basis: 100%;
-   display: flex;
-   justify-content: center;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .buttons{
