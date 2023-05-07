@@ -1,4 +1,4 @@
-<app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+<app-title title="Panier :" margin="1.5rem 0 0 2.5rem"></app-title>
 <app-not-found
   [visible]="!cart || !cart.items.length"
   notFoundMessage="La page est vide !"
@@ -30,7 +30,7 @@
 
       <div>
         <button class="remove-button" (click)="removeFromCart(cartItem)">
-          Tu ne veux plus ??
+          You don't want it anymore ?
         </button>
       </div>
     </li>
@@ -41,6 +41,6 @@
       <div class="total-price">{{cart.totalPrice | currency: "EUR" : true}}</div>
     </div>
 
-    <a routerLink="/checkout">Tu es sur ? tu veux vérifier ?</a>
+    <a routerLink="/checkout">Sure ? Wan to check ?</a>
   </div>
 </div>

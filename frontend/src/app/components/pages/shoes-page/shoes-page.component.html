@@ -1,7 +1,7 @@
 <app-not-found
   [visible]="!shoes"
-  notFoundMessage="La chaussure n'a pas été trouvé"
-  resetLinkText="Retourner à la page d'accueil">
+  notFoundMessage="Shoes not found ..."
+  resetLinkText="Home">
 </app-not-found>
 <div *ngIf="shoes" class="container">
   <img [src]="shoes.imageUrl" [alt]="shoes.name">
@@ -44,6 +44,6 @@
           {{shoes.price | currency:'EUR':true}}
         </span>
       </div>
-      <button (click)="addToCart()">Achète a gros</button>
+      <button (click)="addToCart()">Buy afou</button>
   </div>
 </div>

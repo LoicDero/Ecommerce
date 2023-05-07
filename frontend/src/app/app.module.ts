@@ -27,6 +27,8 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { MapComponent } from './components/partials/map/map.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
+import { OrdersPageComponent } from './components/pages/orders-page/orders-page.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { MapComponent } from './components/partials/map/map.component';
     LoadingComponent,
     CheckoutPageComponent,
     OrderItemsListComponent,
-    MapComponent
+    MapComponent,
+    ProfilePageComponent,
+    OrdersPageComponent
   ],
   imports: [
     BrowserModule,

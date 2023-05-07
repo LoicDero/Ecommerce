@@ -9,13 +9,13 @@
         <li *ngIf="isAuth" class="menu-container">
           <a routerLink="/dashboard">{{user.name}}</a>
           <div class="menu">
-            <a routerLink="/profile">Profil</a>
-            <a routerLink="/orders">Commandes</a>
-            <a (click)="logout()">Déconnection</a>
+            <a routerLink="/profile">Profile</a>
+            <a routerLink="/orders">orders</a>
+            <a (click)="logout()">Logout</a>
           </div>
         </li>
         <a routerLink="/cart-page">
-          Panier <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+          Cart <span *ngIf="cartQuantity">{{cartQuantity}}</span>
         </a>
       </ul>
     </nav>
