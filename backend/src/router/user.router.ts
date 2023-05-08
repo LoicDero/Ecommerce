@@ -24,17 +24,22 @@ router.get("/seed", asyncHandler(
 router.post("/login", asyncHandler(
     async (req, res) => {
         const { email, password } = req.body;
-        const user = await UserModel.findOne({email, password});
+        const user = await UserModel.findOne({ email });
 
         if (user) {
-            res.send(generateTokenReponse(user))
-        }
-        else {
-            const BAD_REQUEST = 400
-            res.status(BAD_REQUEST).send("Tu t'es trompé d'email ou de mot passe frérot")
+            const passwordMatch = await bcrypt.compare(password, user.password);
+            if (passwordMatch) {
+                res.send(generateTokenReponse(user));
+            } else {
+                const BAD_REQUEST = 400;
+                res.status(BAD_REQUEST).send("Password incorrect");
+            }
+        } else {
+            const BAD_REQUEST = 400;
+            res.status(BAD_REQUEST).send("Email not found");
         }
     }
-))
+));
 
 router.post('/register', asyncHandler(
     async (req, res) => {
@@ -46,6 +51,7 @@ router.post('/register', asyncHandler(
         }
         
         const ecryptedPassword = await bcrypt.hash(password, 10);
+        console.log(ecryptedPassword)
 
         const newUser:User = {
             id:'', 

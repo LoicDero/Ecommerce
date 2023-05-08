@@ -15,3 +15,13 @@
   justify-content: center;
   align-items: center;
 }
+.password-toggle{
+  display: flex;
+  position: relative;
+  top: -2rem;
+  left: 15rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin: auto;
+}
