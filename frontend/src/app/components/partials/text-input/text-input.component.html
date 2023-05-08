@@ -1,5 +1,5 @@
 <input-container [label]="label">
-    <input-validation
+    <input-validation *ngIf="showErrorsWhen"
     [control]="control"
     [showErrorsWhen]="showErrorsWhen">
   </input-validation>

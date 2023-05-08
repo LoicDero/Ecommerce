@@ -12,7 +12,7 @@ export class TextInputComponent {
   control!:AbstractControl
 
   @Input()
-  showErrorsWhen:boolean = true
+  showErrorsWhen:boolean = false
 
   @Input()
   label!: string

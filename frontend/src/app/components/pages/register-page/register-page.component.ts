@@ -15,8 +15,10 @@ export class RegisterPageComponent implements OnInit {
 
   registerForm!:FormGroup;
   isSubmitted = false;
-
+  first = false
+  second = false
   returnUrl = '';
+
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
@@ -60,4 +62,10 @@ export class RegisterPageComponent implements OnInit {
     })
   }
 
+  togglePasswordVisibilityFirst(){
+    this.first = !this.first
+  }
+  togglePasswordVisibilitySecond(){
+    this.second = !this.second
+  }
 }

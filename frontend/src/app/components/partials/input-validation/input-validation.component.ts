@@ -2,10 +2,10 @@ import { Component, Input, KeyValueDiffers, OnChanges, OnInit, SimpleChanges } f
 import { AbstractControl } from '@angular/forms';
 
 const VALIDATORS_MESSAGES:any = {
-  required:'Ne doit pas être vide',
-  EMAIL:'Email non valide.',
-  minlength: 'Doit contenir au moins 6 caractères',
-  notMatch: 'Les mots de passe ne correspondent pas',
+  required:'Should not be empty',
+  EMAIL:'Email is not valid',
+  minlength: 'Should be at least 6 characters',
+  notMatch: 'The passwords do not match',
 }
 
 @Component({

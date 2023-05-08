@@ -18,15 +18,21 @@
         [control]="fc.password"
         [showErrorsWhen]="isSubmitted"
         label="Password"
-        type="password">
+        [type]= "first? 'text' : 'password'">
       </text-input>
+      <button type="button" (click)="togglePasswordVisibilityFirst()" class="password-toggle">
+        Show/Hide Password
+      </button>
 
       <text-input
         [control]="fc.confirmPassword"
         [showErrorsWhen]="isSubmitted"
         label="Confirm Password"
-        type="password">
+        [type]= "second? 'text' : 'password'">
       </text-input>
+      <button type="button" (click)="togglePasswordVisibilitySecond()" class="password-toggle">
+        Show/Hide Password
+      </button>
 
       <text-input
       [control]="fc.address"
