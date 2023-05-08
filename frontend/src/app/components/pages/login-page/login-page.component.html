@@ -10,12 +10,17 @@
         label="Email">
       </text-input>
 
-      <text-input
-        [control]="fc.password"
-        [showErrorsWhen]="isSubmitted"
-        type="password"
-        label="Password">
-      </text-input>
+      <div class="password-container">
+        <text-input
+          [control]="fc.password"
+          [showErrorsWhen]="isSubmitted"
+          [type]= "passwordVisible ? 'text' : 'password'"
+          label="Password">
+        </text-input>
+        <button type="button" (click)="togglePasswordVisibility()" class="password-toggle">
+          Show/Hide Password
+        </button>
+      </div>
 
       <default-button text="Login"></default-button>
       <div class="register">

@@ -14,6 +14,8 @@ export class LoginPageComponent implements OnInit {
   loginForm!:FormGroup
   isSubmitted = false;
   returnUrl = ''
+  passwordVisible = true
+
   constructor(private fromBuilder:FormBuilder, private userService:UserService, private activatedRoute:ActivatedRoute,
     private router:Router) {}
 
@@ -37,5 +39,9 @@ export class LoginPageComponent implements OnInit {
     this.userService.login({email:this.fc.email.value, password:this.fc.password.value}).subscribe(() => {
       this.router.navigateByUrl(this.returnUrl)
     })
+  }
+
+  togglePasswordVisibility(){
+    this.passwordVisible = !this.passwordVisible
   }
 }
