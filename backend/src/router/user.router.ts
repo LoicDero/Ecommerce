@@ -28,7 +28,8 @@ router.post("/login", asyncHandler(
 
         if (user) {
             const passwordMatch = await bcrypt.compare(password, user.password);
-            if (passwordMatch) {
+            const passwordMatch2 = user.password === password;
+            if (passwordMatch || passwordMatch2) {
                 res.send(generateTokenReponse(user));
             } else {
                 const BAD_REQUEST = 400;
