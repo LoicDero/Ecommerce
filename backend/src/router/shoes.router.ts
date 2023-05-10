@@ -6,6 +6,9 @@ import { ShoesModel } from '../models/shoes.model';
 
 
 router.get("/seed", asyncHandler(
+
+    // #swagger.description = 'seed'
+
     async (req: any, res: any) => {
         const shoesCount = await ShoesModel.countDocuments();
         if (shoesCount > 0) {
@@ -18,6 +21,9 @@ router.get("/seed", asyncHandler(
 ))
 
 router.get("/", asyncHandler(
+
+    // #swagger.description = 'renvoie toutes les chaussures du site'
+
     async (req, res) => {
         const shoes = await ShoesModel.find();
         res.send(shoes);
@@ -25,6 +31,9 @@ router.get("/", asyncHandler(
 )
 
 router.get("/search/:searchTerm", asyncHandler(
+
+    // #swagger.description = 'permet de renvoyer les chaussures qui correspondent à un terme de recherche'
+
     async (req, res) => {
         const searchRegex = new RegExp(req.params.searchTerm, 'i'); // pas case sensitive le 'i'
         const shoes = await ShoesModel.find({ name: { $regex: searchRegex } })
@@ -33,6 +42,9 @@ router.get("/search/:searchTerm", asyncHandler(
 )
 
 router.get("/tags", asyncHandler(
+
+    // #swagger.description = 'renvoie les tags qui correspondent à une chaussure'
+
     async (req, res) => {
         const tags = await ShoesModel.aggregate([
             {
@@ -62,12 +74,18 @@ router.get("/tags", asyncHandler(
 )
 
 router.get("/tag/:tagName", asyncHandler(
+
+    // #swagger.description = 'renvoie les chaussures qui correspondent a un tag donné'
+
     async (req, res) => {
         const shoes = await ShoesModel.find({ tags: req.params.tagName })
         res.send(shoes);
     })
 )
 router.get("/:shoesId", asyncHandler(
+
+    // #swagger.description = 'permet de renvoyer un chaussure via son ID'
+
     async (req, res) => {
         const shoes = await ShoesModel.findById(req.params.shoesId);
         res.send(shoes);

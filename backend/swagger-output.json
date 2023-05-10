@@ -13,7 +13,7 @@
   "paths": {
     "/api/shoes/seed": {
       "get": {
-        "description": "",
+        "description": "seed",
         "parameters": [],
         "responses": {
           "200": {
@@ -24,7 +24,7 @@
     },
     "/api/shoes/": {
       "get": {
-        "description": "",
+        "description": "renvoie toutes les chaussures du site",
         "parameters": [],
         "responses": {
           "200": {
@@ -35,7 +35,7 @@
     },
     "/api/shoes/search/{searchTerm}": {
       "get": {
-        "description": "",
+        "description": "permet de renvoyer les chaussures qui correspondent à un terme de recherche",
         "parameters": [
           {
             "name": "searchTerm",
@@ -53,7 +53,7 @@
     },
     "/api/shoes/tags": {
       "get": {
-        "description": "",
+        "description": "renvoie les tags qui correspondent à une chaussure",
         "parameters": [],
         "responses": {
           "200": {
@@ -64,7 +64,7 @@
     },
     "/api/shoes/tag/{tagName}": {
       "get": {
-        "description": "",
+        "description": "renvoie les chaussures qui correspondent a un tag donné",
         "parameters": [
           {
             "name": "tagName",
@@ -82,7 +82,7 @@
     },
     "/api/shoes/{shoesId}": {
       "get": {
-        "description": "",
+        "description": "permet de renvoyer un chaussure via son ID",
         "parameters": [
           {
             "name": "shoesId",
@@ -100,7 +100,7 @@
     },
     "/api/users/seed": {
       "get": {
-        "description": "",
+        "description": "seed",
         "parameters": [],
         "responses": {
           "200": {
@@ -111,7 +111,7 @@
     },
     "/api/users/login": {
       "post": {
-        "description": "",
+        "description": "permet de créer un nouveau profil de login",
         "parameters": [
           {
             "name": "body",
@@ -138,7 +138,7 @@
     },
     "/api/users/register": {
       "post": {
-        "description": "",
+        "description": "enregistre un nouveau profil dans la db en cryptant le password",
         "parameters": [
           {
             "name": "body",
@@ -171,7 +171,7 @@
     },
     "/api/orders/create": {
       "post": {
-        "description": "",
+        "description": "test",
         "parameters": [
           {
             "name": "access_token",

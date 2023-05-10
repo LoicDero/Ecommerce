@@ -10,6 +10,9 @@ const router = Router();
 
 
 router.get("/seed", asyncHandler(
+
+    // #swagger.description = 'seed'
+
     async (req: any, res: any) => {
         const usersCount = await UserModel.countDocuments();
         if (usersCount > 0) {
@@ -22,6 +25,9 @@ router.get("/seed", asyncHandler(
 ))
 
 router.post("/login", asyncHandler(
+
+    // #swagger.description = 'permet de créer un nouveau profil de login'
+
     async (req, res) => {
         const { email, password } = req.body;
         const user = await UserModel.findOne({ email });
@@ -43,6 +49,9 @@ router.post("/login", asyncHandler(
 ));
 
 router.post('/register', asyncHandler(
+
+    // #swagger.description = 'enregistre un nouveau profil dans la db en cryptant le password'
+
     async (req, res) => {
         const {name, email, password, address} = req.body;
         const user = await UserModel.findOne({email});

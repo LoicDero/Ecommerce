@@ -12,6 +12,8 @@ router.post('/create',
 asyncHander(async (req:any, res:any) => {
     const requestOrder = req.body;
 
+    // #swagger.description = 'test'
+
     if(requestOrder.items.length <= 0){
         res.status(HTTP_BAD_REQUEST).send('Cart Is Empty !');
         return;
