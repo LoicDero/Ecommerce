@@ -5,15 +5,6 @@ import asyncHandler = require('express-async-handler');
 import { ShoesModel } from '../models/shoes.model';
 
 
-/**
- * @openapi
- * /api/shoes/seed:
- *   get:
- *     description: Create sample shoes
- *     responses:
- *       200:
- *         description: ok
- */
 router.get("/seed", asyncHandler(
     async (req: any, res: any) => {
         const shoesCount = await ShoesModel.countDocuments();
@@ -26,15 +17,6 @@ router.get("/seed", asyncHandler(
     }
 ))
 
-/**
- * @openapi
- * /api/shoes:
- *   get:
- *     description: list all shoes
- *     responses:
- *       200:
- *         description: ok
- */
 router.get("/", asyncHandler(
     async (req, res) => {
         const shoes = await ShoesModel.find();
@@ -42,22 +24,6 @@ router.get("/", asyncHandler(
     })
 )
 
-/**
- * @openapi
- * /api/shoes/search/{searchTerm}:
- *   get:
- *     description: Search
- *     parameters:
- *       - name: serachTerm
- *         in: path
- *         description: term search in shoes description
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: ok
- */
 router.get("/search/:searchTerm", asyncHandler(
     async (req, res) => {
         const searchRegex = new RegExp(req.params.searchTerm, 'i'); // pas case sensitive le 'i'
@@ -66,16 +32,6 @@ router.get("/search/:searchTerm", asyncHandler(
     })
 )
 
-
-/**
- * @openapi
- * /api/shoes/tags:
- *   get:
- *     description: get all shoes tag
- *     responses:
- *       200:
- *         description: ok
- */
 router.get("/tags", asyncHandler(
     async (req, res) => {
         const tags = await ShoesModel.aggregate([
