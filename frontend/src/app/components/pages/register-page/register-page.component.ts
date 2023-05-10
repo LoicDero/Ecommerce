@@ -15,8 +15,8 @@ export class RegisterPageComponent implements OnInit {
 
   registerForm!:FormGroup;
   isSubmitted = false;
-  first = false
-  second = false
+  first = false;
+  second = false;
   returnUrl = '';
 
   constructor(

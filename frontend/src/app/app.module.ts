@@ -30,6 +30,8 @@ import { MapComponent } from './components/partials/map/map.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { OrdersPageComponent } from './components/pages/orders-page/orders-page.component';
 import {MatIconModule} from '@angular/material/icon';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import {MatIconModule} from '@angular/material/icon';
     OrderItemsListComponent,
     MapComponent,
     ProfilePageComponent,
-    OrdersPageComponent
+    OrdersPageComponent,
+    PaymentPageComponent,
+    PaypalButtonComponent
   ],
   imports: [
     BrowserModule,

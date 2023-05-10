@@ -13,8 +13,8 @@ export class LoginPageComponent implements OnInit {
 
   loginForm!:FormGroup
   isSubmitted = false;
-  returnUrl = ''
-  passwordVisible = true
+  returnUrl = '';
+  passwordVisible = false;
 
   constructor(private fromBuilder:FormBuilder, private userService:UserService, private activatedRoute:ActivatedRoute,
     private router:Router) {}
