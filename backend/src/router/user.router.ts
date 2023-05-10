@@ -27,9 +27,9 @@ router.post("/login", asyncHandler(
         const user = await UserModel.findOne({ email });
 
         if (user) {
-            const passwordMatch = await bcrypt.compare(password, user.password);
-            const passwordMatch2 = user.password === password;
-            if (passwordMatch || passwordMatch2) {
+            const passwordAsh = await bcrypt.compare(password, user.password);
+            const passwordNotAsh = user.password === password;
+            if (passwordAsh || passwordNotAsh) {
                 res.send(generateTokenReponse(user));
             } else {
                 const BAD_REQUEST = 400;
