@@ -6,7 +6,7 @@ header {
 }
 
 a {
-    color: #af1313
+    color: #af1313;
 }
 
 a:hover{
@@ -31,11 +31,13 @@ ul {
     display: flex;
     list-style-type: none;
     margin : 0
+
 }
 
 ul a{
     padding : 1rem;
     display: inline-block;
+
 }
 
 a span{
@@ -66,7 +68,7 @@ a span{
   min-width : 8rem;
 }
 
-mat-icon {
+.cart, .person {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -75,4 +77,6 @@ mat-icon {
   height: 1em;
   font-size: inherit;
   transform: scale(2);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

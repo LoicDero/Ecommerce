@@ -7,15 +7,15 @@
           <a routerLink="/login"><mat-icon>login</mat-icon></a>
         </li>
         <li *ngIf="isAuth" class="menu-container">
-          <a routerLink="/dashboard">{{user.name}}</a>
+          <a routerLink="/dashboard"><mat-icon class="person">person</mat-icon></a>
           <div class="menu">
-            <a routerLink="/profile">Profile</a>
+            <a routerLink="/profile" class="profile">{{user.name}}</a>
             <a routerLink="/orders">orders</a>
             <a (click)="logout()"><mat-icon>logout</mat-icon></a>
           </div>
         </li>
         <a *ngIf="isAuth" routerLink="/cart-page">
-          <mat-icon>shopping_cart</mat-icon> <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+          <mat-icon class="cart">local_mall</mat-icon> <span *ngIf="cartQuantity">{{cartQuantity}}</span>
         </a>
       </ul>
     </nav>
