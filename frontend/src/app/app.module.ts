@@ -29,6 +29,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { MapComponent } from './components/partials/map/map.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { OrdersPageComponent } from './components/pages/orders-page/orders-page.component';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { OrdersPageComponent } from './components/pages/orders-page/orders-page.
       timeOut: 3000,
       positionClass: 'toast-bottom-right',
       newestOnTop: false
-    })
+    }),
+    MatIconModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
