@@ -9,6 +9,7 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { AuthGuard } from './auth/guards/auth.guard';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { OrdersPageComponent } from './components/pages/orders-page/orders-page.component';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'checkout', component:CheckoutPageComponent, canActivate:[AuthGuard]},
   {path:'profile', component:ProfilePageComponent, canActivate:[AuthGuard]},
   {path:'orders', component:OrdersPageComponent, canActivate:[AuthGuard]},
+  { path: 'payment', component: PaymentPageComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
