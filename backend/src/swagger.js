@@ -9,11 +9,9 @@ const doc = {
   schemes: ['http'],
 };
 
-const outputFile = './path/swagger-output.json';
-const endpointsFiles = ['./path/endpointsUser.js', './path/endpointsBook.js'];
+const outputFile = './swagger-output.json';
+const endpointsFiles = ['./src/router/shoes.router.ts', './src/router/order.router.ts', './src/router/user.router.ts']
 
 /* NOTE: if you use the express Router, you must pass in the 
    'endpointsFiles' only the root file where the route starts,
    such as index.js, app.js, routes.js, ... */
-
-swaggerAutogen(outputFile, endpointsFiles, doc);
