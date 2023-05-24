@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:'checkout', component:CheckoutPageComponent, canActivate:[AuthGuard]},
   {path:'profile', component:ProfilePageComponent, canActivate:[AuthGuard]},
   {path:'orders', component:OrdersPageComponent, canActivate:[AuthGuard]},
-  { path: 'payment', component: PaymentPageComponent, canActivate: [AuthGuard] },
+  {path:'payment', component: PaymentPageComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({
