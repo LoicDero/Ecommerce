@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json())
 app.use(cors({
   credentials: true,
-  origin: ["http://localhost:4200"]
+  origin: ["http://localhost:4200", "https://localhost:5000"]
 }));
 
 app.use("/api/shoes", shoesRouter);
