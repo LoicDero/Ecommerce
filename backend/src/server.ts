@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from "express";
 import cors from "cors";
+import path from 'path';
 
 import shoesRouter from './router/shoes.router';
 import userRouter from './router/user.router';
@@ -37,8 +38,8 @@ const swaggerUi = require('swagger-ui-express');
 const app = express();
 app.use(express.json())
 app.use(cors({
-    credentials:true,
-    origin:["http://localhost:4200"]
+  credentials: true,
+  origin: ["http://localhost:4200"]
 }));
 
 app.use("/api/shoes", shoesRouter);
@@ -51,7 +52,12 @@ swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
   require('./server.ts'); // Your project's root file
 });
 
-const port = 5000;
+app.use(express.static('public'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
-    console.log("Website served on http://localhost:" + port);
+  console.log("Website served on http://localhost:" + port);
 })
