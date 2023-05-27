@@ -15,9 +15,7 @@ async function startServer() {
 
     const app = express();
     app.use(express.json());
-    app.use(cors({
-      credentials: true,
-    }));
+    app.use(cors());
 
     app.use("/api/shoes", shoesRouter);
     app.use("/api/users", userRouter);
@@ -30,7 +28,7 @@ async function startServer() {
 
     const port = process.env.PORT || 5000;
     app.listen(port, () => {
-      console.log("Website served on http://localhost:" + port);
+      console.log("Website served on port :" + port);
     });
   } catch (error) {
     console.error("Error starting the server:", error);
