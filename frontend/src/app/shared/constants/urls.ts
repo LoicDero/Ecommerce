@@ -1,7 +1,8 @@
 import { environment } from "src/environments/environment";
 
+const BASE_URL = environment.production? 'https://wethepast.herokuapp.com:15042': 'http://localhost:5000';
 
-const BASE_URL = environment.production? 'https://wethepast.herokuapp.com:'+process.env.PORT : 'http://localhost:5000';
+environment.production? console.log("prod") : console.log("pas prod")
 
 export const SHOES_URL = BASE_URL + '/api/shoes';
 export const SHOES_TAGS_URL = SHOES_URL + '/tags';
