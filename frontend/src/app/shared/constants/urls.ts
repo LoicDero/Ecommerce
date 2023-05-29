@@ -1,8 +1,9 @@
 import { environment } from "src/environments/environment";
 
-const port_en_production = process.env.PORT
+const port_en_production = 15042
 
-const BASE_URL = environment.production? 'https://wethepast.herokuapp.com:' + port_en_production : 'http://localhost:5000';
+const BASE_URL = environment.production ? 'https://wethepast.herokuapp.com:' + port_en_production : 'http://localhost:5000';
+
 
 environment.production? console.log("en prod sur :", port_en_production) : console.log("pas prod")
 
