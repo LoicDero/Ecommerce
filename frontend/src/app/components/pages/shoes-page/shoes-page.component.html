@@ -14,14 +14,7 @@
       <span class="favorite {{shoes.favorite? '': 'not'}}">❤</span>
     </div>
       <div class="rating">
-        <star-rating
-          [value]="shoes.stars"
-          [totalstars]="5"
-          checkedcolor="red"
-          uncheckedcolor="black"
-          size="25px"
-          [readonly]="true">
-        </star-rating>
+        <star-rating [stars]="shoes.stars" [size]="1.8" />
       </div>
 
       <div class="brand">
