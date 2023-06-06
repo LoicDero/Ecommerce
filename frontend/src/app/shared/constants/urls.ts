@@ -1,7 +1,7 @@
 import { environment } from "src/environments/environment";
 
 
-const BASE_URL = environment.production ? 'https://wethepast.herokuapp.com' : 'http://localhost:5000';
+const BASE_URL = environment.production ? 'https://wethepast.onrender.com' : 'http://localhost:5000';
 
 
 environment.production? console.log("en prod sur :") : console.log("pas prod")
