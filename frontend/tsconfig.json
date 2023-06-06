@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -24,6 +23,13 @@
       "dom"
     ]
   },
+  "include": [
+  "src/**/*.ts",
+  "src/test.ts",
+  ],
+  "files": [
+    "src/test.ts"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
