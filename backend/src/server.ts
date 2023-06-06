@@ -26,9 +26,8 @@ async function startServer() {
       res.sendFile(path.join(__dirname, 'public', 'index.html'))
     });
 
-    //const port = process.env.PORT || 5000;
-    const port = 443
-    
+   const port = process.env.PORT || 5000;
+
     app.listen(port, () => {
       console.log("Website served on port :" + port);
     });
