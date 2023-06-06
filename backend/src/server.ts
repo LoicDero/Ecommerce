@@ -12,7 +12,7 @@ import { dbConnect } from './configs/database.config';
 async function startServer() {
   try {
     await dbConnect(); // Attend la connexion à la base de données
-
+    
     const app = express();
     app.use(express.json());
     app.use(cors());
