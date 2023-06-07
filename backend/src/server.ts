@@ -12,7 +12,7 @@ import { dbConnect } from './configs/database.config';
 async function startServer() {
   try {
     await dbConnect(); // Attend la connexion à la base de données
-
+    
     const app = express();
     app.use(express.json());
     app.use(cors());
@@ -26,7 +26,8 @@ async function startServer() {
       res.sendFile(path.join(__dirname, 'public', 'index.html'))
     });
 
-    const port = process.env.PORT || 5000;
+   const port = process.env.PORT || 5000;
+
     app.listen(port, () => {
       console.log("Website served on port :" + port);
     });

@@ -26,7 +26,7 @@ router.get("/", asyncHandler(
 
     async (req, res) => {
         const shoes = await ShoesModel.find();
-        res.send(shoes);
+        res.status(200).send(shoes);
     })
 )
 
