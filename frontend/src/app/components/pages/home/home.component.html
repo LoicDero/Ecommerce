@@ -16,14 +16,7 @@ resetLinkText="Reload the search">
           ❤
         </span>
         <div class="stars">
-            <star-rating
-            [value]="shoes.stars"
-            [totalstars]="5"
-            checkedcolor="red"
-            uncheckedcolor="black"
-            size="22px"
-            [readonly]="true">
-          </star-rating>
+          <star-rating [stars]="shoes.stars" />
         </div>
         <div class="product-item-footer">
           <div class="brand">
